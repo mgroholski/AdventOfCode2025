@@ -31,7 +31,6 @@ def getBankValue(bank):
 
             if not replaced and len(res) < 12:
                 res += c
-        # print(i, res, cmpIdx)
 
     return int(res)
 
@@ -39,12 +38,8 @@ def getBankValue(bank):
 def main(banks):
     res = 0
 
-    # banks = ["987654321111111", "811111111111119", "234234234234278", "818181911112111"]
-
     for bank in banks:
-        val = getBankValue(bank)
-        # print(val)
-        res += val
+        res += getBankValue(bank)
     print(res)
 
 
